@@ -1,0 +1,32 @@
+{
+  "name": "tutorial_baileys",
+  "version": "1.0.0",
+  "description": "whatsapp bot / apis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "whastapp"
+  ],
+  "author": "anonymos",
+  "license": "ISC",
+  "dependencies": {
+    "@adiwajshing/baileys": "^5.0.0",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "eslint": "^8.14.0",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "ffmpeg": "^0.0.4",
+    "jest": "^28.0.3",
+    "jimp": "^0.16.1",
+    "link-preview-js": "^2.1.13",
+    "nodemon": "^2.0.16",
+    "qrcode": "^1.5.1",
+    "qrcode-terminal": "^0.12.0",
+    "request": "^2.88.2",
+    "sharp": "^0.29.3",
+    "socket.io": "^4.5.0"
+  }
+}
