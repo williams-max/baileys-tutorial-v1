@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>WA API</title>
+	<title>wa api test demo</title>
 	<meta name="description" content="WhatsApp Api otomatis.">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,7 +86,7 @@ body{
 	<img src="./assets/loader.gif" alt="loading" id="qrcode" style="width: 250px;">
   </div>
 	<div class="card">
-		<div class="title">Guide</div>
+		
 		<div class="body">
 			<p>
 				<li>Escanea el siguiente código QR con tu aplicación de WhatsApp</li>
@@ -99,32 +99,24 @@ body{
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js" crossorigin="anonymous"></script>
 		<script>
-			const qrcode = document.getElementById("qrcode");
-      const iduser = document.getElementById("iduser");
-			const socket = io();
-
-			socket.on("qr",url => {
-				qrcode.setAttribute("src", url);
-				qrcode.setAttribute("alt", "qrcode");
-			});
-			socket.on("qrstatus", src => {
-				qrcode.setAttribute("src", src);
-				qrcode.setAttribute("alt", "loading");
-			});
-
-      socket.on("user", user => {
 		
-        iduser.innerHTML = user;
-        
-				
-			});
+			const qrcode=document.getElementById("qrcode");
+      const  iduser = document.getElementById("iduser");
 
-    
-			
-			socket.on("log", log => {
-				console.log(log);
-			})
-			
+      const socket=io();
+      socket.on("qr",url =>{
+        qrcode.setAttribute("src",url)
+      })
+
+      socket.on("qrstatus",src =>{
+        qrcode.setAttribute("src",src)
+      })
+
+      socket.on("user",user =>{
+        iduser.innerHTML=user
+      })
+
+
 		</script>
 </body>
 </html>
